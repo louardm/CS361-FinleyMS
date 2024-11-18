@@ -9,10 +9,10 @@ Finlay's Graphs and Charts MS
 ## Setup
 
 1. Clone the repository:
-   ```bash
+   ```
    git clone <repository-url>
    cd chart-service
-
+   ```
 ## Verification 
 
 Verify Files: Ensure the following files exist in the repository:
@@ -28,35 +28,36 @@ Verify Files: Ensure the following files exist in the repository:
    docker run -p {PORT}:{PORT} chart-service
 
 # Example Request
-
+   ```
    {
        "chart_type": "bar",
        "data": [10, 20, 30, 40],
        "labels": ["Q1", "Q2", "Q3", "Q4"],
        "title": "Quarterly Sales"
    }
-
+   ```
 # Example Response
    #### Successful Response
+   ```
    {
        "chart": "iVBORw0KGgoAAAANSUhEUgAAB4AAAAQACAIAAAB..."
    }
-
+   ```
    The "chart" field contains a Base64-encoded string representing the generated chart image.
 
 # Testing Locally
 
 All testing was performed in Postman, which is free for lightweight requests. 
-
+   ```
    {
        "chart_type": "bar",
        "data": [10, 20, 30, 40],
        "labels": ["Q1", "Q2", "Q3", "Q4"],
        "title": "Quarterly Sales"
    }
-
+   ```
 ## Example cURL Command:
-
+   ```
    curl -X POST "http://127.0.0.1:{PORT}/generate-chart" \
    -H "Content-Type: application/json" \
    -d '{
@@ -65,13 +66,14 @@ All testing was performed in Postman, which is free for lightweight requests.
        "labels": ["Q1", "Q2", "Q3", "Q4"],
        "title": "Quarterly Sales"
    }'
-
+   ```
 ## Decoding Response:
 The response will include a Base64-encoded image:
-
-{
-    "chart": "iVBORw0KGgoAAAANSUhEUgAAB4AAAAQACAIAAAB..."
-}
+   '''
+   {
+       "chart": "iVBORw0KGgoAAAANSUhEUgAAB4AAAAQACAIAAAB..."
+   }
+   '''
 ### Decode the Base64 string using an online tool like Base64 Image Decoder or render it in HTML:
 
    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAB4AAAAQACAIAAAB..." />
