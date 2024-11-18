@@ -69,7 +69,7 @@ All testing was performed in Postman, which is free for lightweight requests.
    ```
 ## Decoding Response:
 The response will include a Base64-encoded image:
-   '''json
+   '''
    {
        "chart": "iVBORw0KGgoAAAANSUhEUgAAB4AAAAQACAIAAAB..."
    }
