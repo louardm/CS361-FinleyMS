@@ -31,9 +31,9 @@ Verify Files: Ensure the following files exist in the repository:
    ```json
    {
        "chart_type": "bar",
-       "data": [10, 20, 30, 40],
+       "data": [12000, 15000, 9000, 20000],
        "labels": ["Q1", "Q2", "Q3", "Q4"],
-       "title": "Quarterly Sales"
+       "title": "Quarterly Net Income"
    }
    ```
 # Example Response
@@ -51,9 +51,9 @@ All testing was performed in Postman, which is free for lightweight requests.
    ```json
    {
        "chart_type": "bar",
-       "data": [10, 20, 30, 40],
+       "data": [12000, 15000, 9000, 20000],
        "labels": ["Q1", "Q2", "Q3", "Q4"],
-       "title": "Quarterly Sales"
+       "title": "Quarterly Net Income"
    }
    ```
 ## Example cURL Command:
@@ -62,9 +62,9 @@ All testing was performed in Postman, which is free for lightweight requests.
    -H "Content-Type: application/json" \
    -d '{
        "chart_type": "bar",
-       "data": [10, 20, 30, 40],
+       "data": [12000, 15000, 9000, 20000],
        "labels": ["Q1", "Q2", "Q3", "Q4"],
-       "title": "Quarterly Sales"
+       "title": "Quarterly Net Income"
    }'
    ```
 ## Decoding Response:
