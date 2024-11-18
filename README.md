@@ -74,7 +74,8 @@ The response will include a Base64-encoded image:
        "chart": "iVBORw0KGgoAAAANSUhEUgAAB4AAAAQACAIAAAB..."
    }
    ```
-### Decode the Base64 string using an online tool like Base64 Image Decoder or render it in HTML:
+### Decode the Base64 string:
 
    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAB4AAAAQACAIAAAB..." />
 
+![chart_microservice](https://github.com/user-attachments/assets/f1abf524-5560-4f63-97f6-f29fcf5ec18f)
