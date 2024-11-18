@@ -69,11 +69,11 @@ All testing was performed in Postman, which is free for lightweight requests.
    ```
 ## Decoding Response:
 The response will include a Base64-encoded image:
-   '''
+   ```json
    {
        "chart": "iVBORw0KGgoAAAANSUhEUgAAB4AAAAQACAIAAAB..."
    }
-   '''
+   ```
 ### Decode the Base64 string using an online tool like Base64 Image Decoder or render it in HTML:
 
    <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAB4AAAAQACAIAAAB..." />
