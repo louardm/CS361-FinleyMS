@@ -56,7 +56,7 @@ All testing was performed in Postman, which is free for lightweight requests.
        "title": "Quarterly Net Income"
    }
    ```
-## Example cURL Command:
+## Example curl Command:
    ```curl
    curl -X POST "http://127.0.0.1:{PORT}/generate-chart" \
    -H "Content-Type: application/json" \
