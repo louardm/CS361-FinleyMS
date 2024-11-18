@@ -9,7 +9,7 @@ Finlay's Graphs and Charts MS
 ## Setup
 
 1. Clone the repository:
-   ```
+   ```bash
    git clone <repository-url>
    cd chart-service
    ```
@@ -28,7 +28,7 @@ Verify Files: Ensure the following files exist in the repository:
    docker run -p {PORT}:{PORT} chart-service
 
 # Example Request
-   ```
+   ```json
    {
        "chart_type": "bar",
        "data": [10, 20, 30, 40],
@@ -38,7 +38,7 @@ Verify Files: Ensure the following files exist in the repository:
    ```
 # Example Response
    #### Successful Response
-   ```
+   ```json
    {
        "chart": "iVBORw0KGgoAAAANSUhEUgAAB4AAAAQACAIAAAB..."
    }
@@ -48,7 +48,7 @@ Verify Files: Ensure the following files exist in the repository:
 # Testing Locally
 
 All testing was performed in Postman, which is free for lightweight requests. 
-   ```
+   ```json
    {
        "chart_type": "bar",
        "data": [10, 20, 30, 40],
@@ -57,7 +57,7 @@ All testing was performed in Postman, which is free for lightweight requests.
    }
    ```
 ## Example cURL Command:
-   ```
+   ```curl
    curl -X POST "http://127.0.0.1:{PORT}/generate-chart" \
    -H "Content-Type: application/json" \
    -d '{
@@ -69,7 +69,7 @@ All testing was performed in Postman, which is free for lightweight requests.
    ```
 ## Decoding Response:
 The response will include a Base64-encoded image:
-   '''
+   '''json
    {
        "chart": "iVBORw0KGgoAAAANSUhEUgAAB4AAAAQACAIAAAB..."
    }
