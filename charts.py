@@ -1,5 +1,5 @@
 from fastapi import FastAPI, HTTPException
-from pydantic import BaseModel, field_validator, model_validator
+from pydantic import BaseModel, model_validator
 import matplotlib.pyplot as plt
 import io
 import base64

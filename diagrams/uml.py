@@ -4,12 +4,14 @@ from graphviz import Digraph
 uml = Digraph("Charts Microservice", format="png")
 uml.attr(rankdir="TB", size="10,10", dpi="300")
 
-# Entities
+# MAIN NODES
 uml.node("Client", shape="box", style="filled", color="orange", label="Client Program")
 uml.node("Microservice", shape="box", style="filled", color="green", label="Chart Microservice")
 uml.node("Validator", shape="box", style="dashed", color="red", label="Input Validator", fontcolor='red')
 uml.node("Matplotlib", shape="box", style="filled", color="lightblue", label="Matplotlib")
 uml.node("Memory", shape="box", style="dotted", color="blue", label="Memory")
+
+# ROUTES
 
 # Client and MS
 uml.edge("Client", "Microservice", xlabel="Start -> (Request Payload)", label="",
@@ -29,5 +31,5 @@ uml.edge("Memory", "Microservice", label="Return Chart (Base64 Encoded)", color=
 # Client image decoding
 uml.edge("Client", "Client", label="Decode Base64 Image for Display")
 
-# Render the diagram
+# Rendering diagram
 uml.render("chart_microservice", view=False)

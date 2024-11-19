@@ -15,8 +15,8 @@ if padding_needed:
 # Decode the Base64 string
 try:
     chart_binary = base64.b64decode(chart_base64)
-    with open("example_images/investmentgrowth.png", "wb") as file:
+    with open("example_images/investment_growth.png", "wb") as file:
         file.write(chart_binary)
-    print("Chart saved as 'investmentgrowth.png'")
+    print("Chart saved as 'investment_growth.png'")
 except base64.binascii.Error as e:
     print(f"Error decoding Base64: {e}")
